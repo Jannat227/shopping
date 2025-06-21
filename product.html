@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>منتج تفاعلي</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+  background: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: #111;
+  color: #eee;
+}
+.header {
+  padding: 20px;
+  text-align: center;
+}
+.toggle-dark {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.image-gallery {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.image-gallery img {
+  max-width:100%; border-radius:8px;
+}
+.thumbnails {
+  margin-top:10px;
+}
+.thumbnails img {
+  width:60px;
+  margin:5px;
+  cursor:pointer;
+}
+.details {
+  flex:1 1 60%; padding:20px;
+}
+.details h2 {
+  font-size:28px;
+}
+.details .price {
+  font-size:24px;
+  color:#e63946;
+}
+.options {
+  margin:20px 0;
+}
+.options select {
+  padding:5px;
+}
+.countdown {
+  font-size:18px;
+  font-weight:bold;
+  color:#ff6600;
+}
+.add-to-cart {
+  background:#006d77;
+  color:#fff;
+  padding:15px;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+.add-to-cart:hover {
+  background:#00525a;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>منتج متميز</h1>
+  <button class="toggle-dark" id="toggle">🌙 تفعيل الوضع الليلي</button>
+</div>
+<div class="container">
+  <!-- معرض الصور -->
+  <div class="image-gallery">
+    <img id="main-image" src="https://via.placeholder.com/500x500.png?text=Product+Image" alt="Product">
+    <div class="thumbnails">
+      <img src="https://via.placeholder.com/100.png?text=1" alt="" data-image="https://via.placeholder.com/500x500.png?text=Image1">
+      <img src="https://via.placeholder.com/100.png?text=2" alt="" data-image="https://via.placeholder.com/500x500.png?text=Image2">
+      <img src="https://via.placeholder.com/100.png?text=3" alt="" data-image="https://via.placeholder.com/500x500.png?text=Image3">
+    </div>
+  </div>
+  <!-- تفاصيل المنتج -->
+  <div class="details">
+    <h2>اسم المنتج</h2>
+    <p class="price">28.99 $</p>
+    <div class="countdown">العرض ينتهي خلال: <span id="countdown">18h 06d 48m</span></div>
+    <div class="options">
+      <label>المقاس:
+        <select>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </label>
+      <br><br>
+      <label>اللون:
+        <select>
+          <option>أحمر</option>
+          <option>أزرق</option>
+          <option>أخضر</option>
+        </select>
+      </label>
+    </div>
+    <p>هذا المنتج يتميز بجودة عالية، ومناسب لجميع المناسبات. سارع للحصول على خصم متميز قبل انتهاء العد التنازلي!</p>
+    <button class="add-to-cart">🛍️ أضف للسلة</button>
+  </div>
+</div>
+
+<script>
+/* ================= العد التنازلي الحي ================= */
+let hours = 18, days = 6, mins = 48, seconds = 59;
+
+function updateCountdown(){
+  seconds--;  
+  if(seconds < 0) {
+    seconds = 59;
+    mins--; 
+    if(mins < 0) {
+      mins = 59;
+      hours--; 
+      if(hours < 0) {
+        hours = 23;
+        days--; 
+      }
+    }
+  }
+  document.getElementById('countdown').textContent = `${days}d ${hours}h ${mins}m ${seconds}s`;
+}
+setInterval(updateCountdown, 1000);
+
+/* ================= الوضع الليلي ================= */
+const body = document.body;
+const btn = document.getElementById('toggle');
+
+btn.addEventListener('click', ()=>{
+  body.classList.toggle('dark');
+  btn.textContent = body.classList.contains('dark') ? '☀️ تفعيل الوضع النهاري' : '🌙 تفعيل الوضع الليلي';
+});
+
+/* ================= معرض الصور ================= */
+const thumbs = document.querySelectorAll('.thumbnails img');
+const mainImage = document.getElementById('main-image');
+
+thumbs.forEach(img=>{
+  img.addEventListener('click', ()=>{
+    mainImage.src = img.getAttribute('data-image');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Best Sealing</title>
+ <link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+/* ========================= General Styles ========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+}
+h2, h3 {
+  text-align: center;
+}
+.container {
+  padding: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+.card img {
+  max-width:100%; height:auto;
+}
+.card .info {
+  margin: 10px 0;
+}
+.timer {
+  text-align: center;
+  font-size: 18px;
+}
+.timer .count {
+  font-size: 24px;
+  font-weight: bold;
+}
+.feedback {
+  text-align: center;
+}
+.feedback .quote {
+  font-style: italic;
+}
+.footer {
+  background: #f4f4f4;
+  padding: 20px;
+}
+.footer .columns {
+  display: flex;
+  justify-content: space-around;
+}
+.footer h4 {
+  font-size: 16px;
+}
+.footer a {
+  text-decoration: none;
+  color: #333;
+}
+.subscribe {
+  text-align: center;
+  margin: 20px 0;
+}
+.subscribe input {
+  padding: 10px;
+  font-size: 16px;
+}
+.subscribe button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.exclusive {
+  text-align: center;
+  background: #ffeef1;
+  padding: 30px;
+}
+.exclusive .countdown {
+  font-size: 30px;
+  font-weight: bold;
+}
+.shop-now {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+ <header>
+    <div class="navbar">
+        <br><br> <br><br>
+        <h2>jannat's home</h2>
+        <nav>
+            <ul>
+                <li><a href="#HOME">HOME</a></li>
+                <li><a href="#SHOP">SHOP</a></li>
+                <li><a href="#FEATURES">FEATURES</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
+                 <li><a href="#login">LOGIN</a></li> 
+            </ul>
+        </nav>
+         <button id="toggle">🌙</button>
+    </div>
+   </header>
+   <div class="contents">
+    <div>
+       <h1>Discover and <br>find your<br> own fashion</h1><br><br><br>
+       <p>Explore our curated collection of stylish<br> clothing and accessories tallored to your<br> unique taste</p><br><br>
+       <h2>Export Now</h2>
+    </div>
+    <div class="img">
+        <img src="images/main.jpg" alt="picture">
+    </div>
+   </div>
+  <!-- =================== Categories Section =================== -->
+<section class="categories" id="categories">
+  <h2>Explore Our Categories</h2>
+  <div class="category-grid">
+
+   <a href="shirts.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>Shirts</h3>
+  </div>
+</a>
+<a href="T-Shirts.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>T-Shirts</h3>
+  </div>
+</a>
+<a href="Pants.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>Pants</h3>
+  </div>
+</a>
+<a href="Dresses.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>Dresses</h3>
+  </div>
+</a>
+<a href="Jackets.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>Jackets</h3>
+  </div>
+</a>
+<a href="accessories.html" style="text-decoration: none; color: inherit;">
+  <div class="category-card">
+    <img src="images/main.jpg" alt="Shirts" >
+    <h3>accessories</h3>
+  </div>
+</a>
+  </div>
+</section>
+
+<!-- =================== Main Products =================== -->
+<section class="container">
+  <h2>Best Sealing</h2><br>
+  <div class="grid">
+    <!-- Products 1-9 --> 
+    <!-- You can repeat this block for all products -->
+    <div class="card" id="SHOP">
+      <img src="images/main.jpg" alt="Product">
+      <div class="info">
+        <h3>Name of the product</h3>
+        <p>28.99 $ | 4.5</p>
+      </div>
+    </div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+</div>
+</section>
+
+<!-- =================== Exclusive Offer =================== -->
+<section class="exclusive">
+  <h3>Exclusive offer</h3><br>
+  <p>Unlock the ultimate style upgrade with our exclusive offer.<br>Enjoy savings of up to 40% off on our latest New Arrivals</p>
+  <div class="countdown">
+    <span id="countdown">18h 06d 48m</span>
+  </div><br>
+  <button class="shop-now">SHOP NOW</button>
+</section>
+
+<!-- =================== Designer Clothes =================== -->
+<section class="container">
+  <h2>Designer Clothes For You</h2>
+  <div class="grid">
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+    <div class="card"><img src="images/main.jpg"><div class="info"><h3>Name of the product</h3><p>28.99 $ | 4.5</p></div></div>
+  </div>
+</section>
+
+<!-- =================== Feedback Corner =================== -->
+<section class="feedback">
+  <h2>Feedback Corner</h2>
+  <div class="boxes">
+    <div class="box">
+      <p>"The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes ordered fit perfectly. I'm beyond satisfied!"<br>- Emily Welson</p>
+    </div>
+    <div class="box">
+      <p>"I had a great experience shopping on this website. The clothes I bought are fashionable and comfortable. Highly satisfied!"<br>- Olivia Martinez</p>
+    </div>
+</section>
+</section>
+
+<!-- =================== Footer =================== -->
+<footer class="footer">
+  <div class="columns">
+     <div>
+      <h4>jannat's home</h4>
+      <a href="#">Social media</a><br>
+      <a href="#">Blog</a>
+    </div>
+    <div>
+      <h4>About Us</h4>
+      <a href="#">About Us</a><br>
+      <a href="#">Contact</a><br>
+      <a href="#">News</a><br>
+      <a href="#">Support</a>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <a href="#">Overview</a><br>
+      <a href="#">Pricing</a><br>
+      <a href="#">Releases</a>
+    </div>
+    <div>
+      <h4>Stay Up To Date</h4>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter your email">
+        <button>Submit</button>
+      </div>
+      <p>Tearms | Privecy | Cookies</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #222;
+    color: #eee;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+  
+  .column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .column ul li a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .column ul li a:hover {
+    color: #fff;
+  }
+  
+  .subscribe input[type="email"] {
+    padding: 8px;
+    width: 70%;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+  }
+  
+  .subscribe button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe button:hover {
+    background-color: #e65500;
+  }
+  
+  .footer p {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .footer p a {
+    color: #888;
+    text-decoration: none;
+  }
+  
+  .footer p a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .columns {
+      flex-direction: column;
+    }
+  
+    .subscribe input[type="email"] {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+  
+    .subscribe button {
+      width: 100%;
+      border-radius: 3px;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('subscribe-btn').addEventListener('click', function() {
+    const emailInput = document.querySelector('.subscribe input[type="email"]');
+    const email = emailInput.value.trim();
+  
+    if(email === '') {
+      alert('Please enter your email');
+      emailInput.focus();
+      return;
+    }
+  
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)) {
+      alert('Please enter a valid email address');
+      emailInput.focus();
+      return;
+    }
+  
+    alert('Thank you for subscribing!');
+    emailInput.value = '';
+  });
+</script>
+
+<!-- =================== JS for Countdown =================== -->
+<script>
+(function(){
+  let hours = 18, days = 6, mins = 48;
+
+  function updateCountdown(){
+    const text = `${hours}h ${days}d ${mins}m`;
+    document.getElementById('countdown').textContent = text;
+
+    // Optional: You can make this countdown live
+  }
+  updateCountdown();
+})();
+</script>
+<script>
+let hours = 18, days = 6, mins = 48, seconds = 59;
+
+function updateCountdown(){
+  seconds--;  
+  if(seconds < 0) {
+    seconds = 59;
+    mins--; 
+    if(mins < 0) {
+      mins = 59;
+      hours--; 
+      if(hours < 0) {
+        hours = 23;
+        days--; 
+      }
+    }
+  }
+  document.getElementById('countdown').textContent = `${days}d ${hours}h ${mins}m ${seconds}s`;
+}
+setInterval(updateCountdown, 1000);
+</script>
+
+<script>
+const body = document.body;
+const btn = document.getElementById('toggle');
+
+btn.addEventListener('click', ()=>{
+  body.classList.toggle('dark');
+  btn.textContent = body.classList.contains('dark') 
+    ? '☀️'
+    : '🌙 ';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #C2EFD3;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+    padding-left: 26px;
+}
+
+li a {
+    color: #224F34;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+li a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-right: 400px ;
+}
+
+/* Contents Section */
+.contents {
+    background-color: #C2EFD3;
+    padding: 100px;
+    color:#224F34 ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents h1 {
+   font-size: 60px;
+}
+
+.contents p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contents h2 {
+    color: #ffffff;
+    border:  solid #224F34;
+    width: 150px;
+    background-color: #224F34;
+    padding: 5px;
+}
+
+.contents .img img {
+    width: 280px;
+    margin-right: 50px;
+    margin-top: 10px;
+    border-radius: 80px 50px 80px 30px;
+}
+
+.contents h1, .contents p, .contents h2, .contents .img img {
+     display: flex;
+     float: left;
+}
+
+/* Sealing Section */
+.sealing {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sealing h2 {
+    color: #224F34;
+    font-weight: 800;
+}
+
+.sealing p {
+    font-weight: 600;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: #224F34;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.Get{
+    display: flex;
+    justify-content: center;
+    color: #224F34;
+}
+
+/* Feedback Section */
+.feedback {
+  text-align: center;
+  padding: 40px;
+}
+
+.feedback .boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feedback .box {
+  flex: 1 1 30%;           /* يأخذ تقريبًا 30% من العرض */
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  min-width: 250px;
+}
+
+/* تنسيق البوكسات بالألوان المتناوبة */
+.feedback .box:nth-child(2n-1) {
+  background-color: #ffffff;
+  color: #224F34;
+  border: 1px solid #224F34;
+}
+
+.feedback .box:nth-child(2n) {
+  background-color: #224F34;
+  color: #ffffff;
+}
+
+/* الوضع الليلي */
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .card {
+  background: #222;
+  color: #eee;
+}
+
+body.dark .navbar,
+body.dark .footer {
+  background: #222;
+}
+
+body.dark a {
+  color: #ddd;
+}
+
+body.dark h2,
+body.dark h3,
+body.dark p {
+  color: #eee;
+}
+
+/* تعديل خاص لقسم contents في الوضع الليلي */
+body.dark .contents {
+  background-color: #222;    /* خلفية داكنة */
+  color: #ddd;               /* نص فاتح */
+  padding: 50px;
+  border-radius: 10px;
+}
+
+body.dark .contents h1,
+body.dark .contents p,
+body.dark .contents h2 {
+  color: #ddd;
+}
+
+body.dark .contents .img img {
+  filter: brightness(0.7);
+  border-radius: 80px 50px 80px 30px;
+}
+
+/* تعديل خاص لقسم feedback في الوضع الليلي */
+body.dark .feedback {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+body.dark .feedback .box:nth-child(2n-1) {
+  background-color: #333;
+  color: #ddd;
+  border: 1px solid #555;
+}
+
+body.dark .feedback .box:nth-child(2n) {
+  background-color: #555;
+  color: #eee;
+  border: 1px solid #777;
+}
+/* تعديل خاص لقسم exclusive offer على الوضع الليلي */
+body.dark .exclusive {
+  background-color: #2a2a2a; /* خلفية داكنة مريحة */
+  color: #eee;              /* النص بلون فاتح */
+}
+
+body.dark .exclusive h3,
+body.dark .exclusive p {
+  color: #eee;
+}
+
+body.dark .exclusive .countdown {
+  color: #ff9f43;           /* مثال على إبقاء العد بلون مميّز على الداكن */
+}
+
+body.dark .exclusive .shop-now {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* باقي التنسيقات الأصلية */
+
+.categories {
+  padding: 40px;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card img {
+  max-width: 100px;
+  height: auto;
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin: 15px 0 0;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+}
+
