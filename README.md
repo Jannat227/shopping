@@ -24,4 +24,4 @@ Users can explore product categories and see product listings on the homepage.
 1. Clone the repository  
    ```bash
    git clone https://github.com/Jannat227/shopping.git
-# https://jannat227.github.io/shopping/
+
